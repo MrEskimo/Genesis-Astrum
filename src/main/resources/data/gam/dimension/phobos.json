@@ -1,8 +1,8 @@
 {
-  "type": "gam:ceres_dimension_type",
+  "type": "gam:small_planet_dimension_type",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "gam:ceres_noise",
+    "settings": "gam:phobos_noise",
     "biome_source": {
       "type": "minecraft:multi_noise",
       "biomes": [

@@ -1,5 +1,5 @@
 {
-  "type": "gam:ceres_dimension_type",
+  "type": "gam:normal_planet_dimension_type",
   "generator": {
     "type": "minecraft:noise",
     "settings": "gam:dying_world_noise",
