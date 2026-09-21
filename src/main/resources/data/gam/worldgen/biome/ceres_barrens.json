@@ -28,7 +28,7 @@
     [],
     [],
     [],
-    ["gam:ceres_salt_deposit_disk","gam:ceres_light_sand_disk"],
+    ["gam:ceres_salt_deposit_disk","gam:ceres_light_sand_disk", "gam:icy_dust_disk_placed"],
     []
   ]
 }

@@ -29,5 +29,8 @@ public class DataGenerators {
         GAMBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
                 new GAMBlockTagGenerator(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new GAMItemTagGenerator(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
+
+
+        generator.addProvider(event.includeServer(), new GAMWorldgenProvider(packOutput, lookupProvider));
     }
 }
