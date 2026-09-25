@@ -21,7 +21,7 @@ public class GAMPlacedFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, ICY_DUST_DISK_PLACED, configuredFeatures.getOrThrow(GAMConfiguredFeatures.ICY_DUST_DISK),
-                List.of(RarityFilter.onAverageOnceEvery(5), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()));
+                List.of(CountPlacement.of(5), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, NoiseThresholdCountPlacement.of(-0.2D, 1, 0)));
 
     }
     public static ResourceKey<PlacedFeature> registerkey(String name) {
