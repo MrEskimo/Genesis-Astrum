@@ -45,6 +45,5 @@ public class GAMBlockTagGenerator extends BlockTagsProvider {
                         GAMBlocks.CERES_LIGHT_SAND.get(),
                         GAMBlocks.CERES_SALT_DEPOSIT.get());
 
-
     }
 }

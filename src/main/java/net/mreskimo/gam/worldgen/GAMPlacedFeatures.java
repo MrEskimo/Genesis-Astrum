@@ -13,7 +13,6 @@ import net.mreskimo.gam.GAM;
 
 import java.util.List;
 
-
 public class GAMPlacedFeatures {
     public static final ResourceKey<PlacedFeature> ICY_DUST_DISK_PLACED = registerkey("icy_dust_disk_placed");
 
