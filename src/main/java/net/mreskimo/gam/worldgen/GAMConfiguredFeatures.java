@@ -10,6 +10,7 @@ import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.util.valueproviders.WeightedListInt;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CaveVines;
 import net.minecraft.world.level.block.CaveVinesBlock;
@@ -33,12 +34,14 @@ import java.util.List;
 
 public class GAMConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ICY_DUST_DISK = registerKey("icy_dust_disk");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ICY_DUST_PILLAR = registerKey("icy_dust_pillar");
+    //public static final ResourceKey<ConfiguredFeature<?, ?>> ICY_DUST_PILLAR = registerKey("icy_dust_pillar");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BROWN_GAS_DISK = registerKey("brown_gas_disk");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest ceresReplaceable = new TagMatchTest(GAMTags.Blocks.CERES_REPLACEABLE);
 
         register(context, ICY_DUST_DISK, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(GAMBlocks.ICY_DUST.get()), BlockPredicate.matchesBlocks(List.of(GAMBlocks.CERES_SAND.get(), GAMBlocks.CERES_SALT_DEPOSIT.get())), UniformInt.of(2, 3), 1));
+        register(context, BROWN_GAS_DISK, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(GAMBlocks.BROWN_GAS.get()), BlockPredicate.matchesBlocks(List.of(Blocks.AIR, GAMBlocks.BROWN_GAS.get())), UniformInt.of(2, 3), 1));
 
 
     }

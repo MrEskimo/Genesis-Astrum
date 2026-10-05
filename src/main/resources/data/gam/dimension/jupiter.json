@@ -1,0 +1,24 @@
+{
+  "type": "gam:normal_planet_dimension_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "gam:ceres_noise",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "gam:jupiter_plains",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "depth": 0,
+            "weirdness": 0,
+            "offset": 0
+          }
+        }
+      ]
+    }
+  }
+}
