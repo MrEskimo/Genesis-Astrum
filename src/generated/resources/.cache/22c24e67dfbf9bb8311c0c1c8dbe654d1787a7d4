@@ -1,19 +1,16 @@
-// 1.20.1	2026-10-04T18:17:37.7053514	Block States: gam
-8ac38e99beda7803c8799ed9a71633cc0126d66b assets/gam/blockstates/brown_gas.json
+// 1.20.1	2026-10-20T09:09:21.1689287	Block States: gam
 8a14fe2cbee7f2e09bf2d72f16490714e1984cc6 assets/gam/blockstates/ceres_light_rocky_sand.json
 97a192ad26c15d78e9b37a26bd040507f18aa234 assets/gam/blockstates/ceres_light_sand.json
 173dfde706e939e4e1a70916b6dcb80850ba8751 assets/gam/blockstates/ceres_rocky_sand.json
 42a91491ec9f0123698a30ca64ee9d0263b3aeb6 assets/gam/blockstates/ceres_salt_deposit.json
 2f9b83acb05e2b7f04f9062401b7622f7c8254e8 assets/gam/blockstates/ceres_sand.json
 3046eaafa608d014fbf0882be50078deae1ed097 assets/gam/blockstates/ceres_stone.json
-82d983629c9323ca9250575ee1e7b1593e4d9509 assets/gam/models/block/brown_gas.json
 7be617ad2df839d52d4f38ec905dcd6c8ddd93be assets/gam/models/block/ceres_light_rocky_sand.json
 500b6e1071f0d286fd192914b035c801e06c92f6 assets/gam/models/block/ceres_light_sand.json
 3167c99ff448dea786e9f384ffe7e25da93ac9f2 assets/gam/models/block/ceres_rocky_sand.json
 eefc1df7bfea80a6904d4afdb47c84d9abbb67d1 assets/gam/models/block/ceres_salt_deposit.json
 317ab187e04b9aaab25c38990701a48abb4b046c assets/gam/models/block/ceres_sand.json
 b4cb9e3b382ee06455cb533b2ca2beddde418123 assets/gam/models/block/ceres_stone.json
-730196563c018e007adf101877fca48fe328bb68 assets/gam/models/item/brown_gas.json
 58842dbc30e1100c5c9fb4d02840a3fb347c7494 assets/gam/models/item/ceres_light_rocky_sand.json
 d9f2a39105d70afcf66e41a13b1157bd2e0c83ba assets/gam/models/item/ceres_light_sand.json
 30bf776a3498d789f78694b6d3ab0bd67b4f9611 assets/gam/models/item/ceres_rocky_sand.json

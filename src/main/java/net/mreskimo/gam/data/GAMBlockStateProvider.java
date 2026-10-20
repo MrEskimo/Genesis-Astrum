@@ -23,7 +23,6 @@ public class GAMBlockStateProvider extends BlockStateProvider {
         blockWithItem(GAMBlocks.CERES_LIGHT_ROCKY_SAND);
         blockWithItem(GAMBlocks.CERES_SALT_DEPOSIT);
         //blockWithItem(GAMBlocks.ICY_DUST);
-        blockWithItem(GAMBlocks.BROWN_GAS);
 
     }
 

@@ -13,7 +13,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.mreskimo.gam.GAM;
-import net.mreskimo.gam.blocks.custom.BrownGasBlock;
 import net.mreskimo.gam.item.GAMItems;
 
 import java.util.function.Supplier;
@@ -47,10 +46,6 @@ public class GAMBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> DEIMOS_STONE = registerBlock("deimos_stone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
-
-    public static final RegistryObject<Block> BROWN_GAS = registerBlock("brown_gas",
-            () -> new BrownGasBlock(BlockBehaviour.Properties.of().noCollission().noLootTable().noOcclusion().isViewBlocking(GAMBlocks::never)));
-
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

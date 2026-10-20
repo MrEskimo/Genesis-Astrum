@@ -15,15 +15,11 @@ import java.util.List;
 
 public class GAMPlacedFeatures {
     public static final ResourceKey<PlacedFeature> ICY_DUST_DISK_PLACED = registerkey("icy_dust_disk_placed");
-    public static final ResourceKey<PlacedFeature> BROWN_GAS_DISK_PLACED = registerkey("brown_gas_disk_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, ICY_DUST_DISK_PLACED, configuredFeatures.getOrThrow(GAMConfiguredFeatures.ICY_DUST_DISK),
-                List.of(CountPlacement.of(5), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, NoiseThresholdCountPlacement.of(-0.2D, 1, 0)));
-
-        register(context, BROWN_GAS_DISK_PLACED, configuredFeatures.getOrThrow(GAMConfiguredFeatures.BROWN_GAS_DISK),
                 List.of(CountPlacement.of(5), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, NoiseThresholdCountPlacement.of(-0.2D, 1, 0)));
 
     }
