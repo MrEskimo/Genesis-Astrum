@@ -2,9 +2,9 @@
   "type": "gam:normal_planet_dimension_type",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "gam:ipa_noise",
     "biome_source": {
-      "type": "minecraft:the_end"
-    }
+      "type": "gam:ipa_biomes"
+    },
+    "settings": "gam:ipa_noise"
   }
 }

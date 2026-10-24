@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "net.mreskimo.gam.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+
+  ],
+  "mixins": [
+    "BiomeSourceMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
