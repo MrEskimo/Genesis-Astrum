@@ -3,7 +3,7 @@
   "generator": {
     "type": "minecraft:noise",
     "biome_source": {
-      "type": "gam:ipa_biomes"
+      "type": "minecraft:ipa_biome"
     },
     "settings": "gam:ipa_noise"
   }

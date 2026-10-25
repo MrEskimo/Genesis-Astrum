@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 public class IpaBiomeSource extends BiomeSource {
     public static final Codec<IpaBiomeSource> CODEC = RecordCodecBuilder.create((ipaBiomeSourceInstance) -> ipaBiomeSourceInstance.group(RegistryOps.retrieveElement(Biomes.PLAINS), RegistryOps.retrieveElement(Biomes.END_HIGHLANDS), RegistryOps.retrieveElement(Biomes.END_MIDLANDS), RegistryOps.retrieveElement(Biomes.SMALL_END_ISLANDS), RegistryOps.retrieveElement(Biomes.END_BARRENS)).apply(ipaBiomeSourceInstance, ipaBiomeSourceInstance.stable(IpaBiomeSource::new)));
-    private final Holder<Biome> end;
+    private final Holder<Biome> center;
     private final Holder<Biome> highlands;
     private final Holder<Biome> midlands;
     private final Holder<Biome> islands;
@@ -25,7 +25,7 @@ public class IpaBiomeSource extends BiomeSource {
     }
 
     private IpaBiomeSource(Holder<Biome> biomeHolder, Holder<Biome> biomeHolder1, Holder<Biome> biomeHolder2, Holder<Biome> biomeHolder3, Holder<Biome> biomeHolder4) {
-        this.end = biomeHolder;
+        this.center = biomeHolder;
         this.highlands = biomeHolder1;
         this.midlands = biomeHolder2;
         this.islands = biomeHolder3;
@@ -33,7 +33,7 @@ public class IpaBiomeSource extends BiomeSource {
     }
 
     protected Stream<Holder<Biome>> collectPossibleBiomes() {
-        return Stream.of(this.end, this.highlands, this.midlands, this.islands, this.barrens);
+        return Stream.of(this.center, this.highlands, this.midlands, this.islands, this.barrens);
     }
 
     protected Codec<? extends BiomeSource> codec() {
@@ -47,7 +47,7 @@ public class IpaBiomeSource extends BiomeSource {
         int l = SectionPos.blockToSectionCoord(i);
         int i1 = SectionPos.blockToSectionCoord(k);
         if ((long)l * (long)l + (long)i1 * (long)i1 <= 4096L) {
-            return this.end;
+            return this.center;
         } else {
             int j1 = (SectionPos.blockToSectionCoord(i) * 2 + 1) * 8;
             int k1 = (SectionPos.blockToSectionCoord(k) * 2 + 1) * 8;
