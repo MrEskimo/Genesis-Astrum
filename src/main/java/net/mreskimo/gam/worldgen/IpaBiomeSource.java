@@ -9,11 +9,12 @@ import net.minecraft.core.SectionPos;
 import net.minecraft.resources.RegistryOps;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.DensityFunction;
+import net.mreskimo.gam.worldgen.biome.GAMBiomes;
 
 import java.util.stream.Stream;
 
 public class IpaBiomeSource extends BiomeSource {
-    public static final Codec<IpaBiomeSource> CODEC = RecordCodecBuilder.create((ipaBiomeSourceInstance) -> ipaBiomeSourceInstance.group(RegistryOps.retrieveElement(Biomes.PLAINS), RegistryOps.retrieveElement(Biomes.END_HIGHLANDS), RegistryOps.retrieveElement(Biomes.END_MIDLANDS), RegistryOps.retrieveElement(Biomes.SMALL_END_ISLANDS), RegistryOps.retrieveElement(Biomes.END_BARRENS)).apply(ipaBiomeSourceInstance, ipaBiomeSourceInstance.stable(IpaBiomeSource::new)));
+    public static final Codec<IpaBiomeSource> CODEC = RecordCodecBuilder.create((ipaBiomeSourceInstance) -> ipaBiomeSourceInstance.group(RegistryOps.retrieveElement(GAMBiomes.IPA_OCEAN_BIOME), RegistryOps.retrieveElement(Biomes.END_HIGHLANDS), RegistryOps.retrieveElement(Biomes.END_MIDLANDS), RegistryOps.retrieveElement(Biomes.SMALL_END_ISLANDS), RegistryOps.retrieveElement(Biomes.END_BARRENS)).apply(ipaBiomeSourceInstance, ipaBiomeSourceInstance.stable(IpaBiomeSource::new)));
     private final Holder<Biome> center;
     private final Holder<Biome> highlands;
     private final Holder<Biome> midlands;
@@ -21,7 +22,7 @@ public class IpaBiomeSource extends BiomeSource {
     private final Holder<Biome> barrens;
 
     public static IpaBiomeSource create(HolderGetter<Biome> biomeHolderGetter) {
-        return new IpaBiomeSource(biomeHolderGetter.getOrThrow(Biomes.PLAINS), biomeHolderGetter.getOrThrow(Biomes.END_HIGHLANDS), biomeHolderGetter.getOrThrow(Biomes.END_MIDLANDS), biomeHolderGetter.getOrThrow(Biomes.SMALL_END_ISLANDS), biomeHolderGetter.getOrThrow(Biomes.END_BARRENS));
+        return new IpaBiomeSource(biomeHolderGetter.getOrThrow(GAMBiomes.IPA_OCEAN_BIOME), biomeHolderGetter.getOrThrow(Biomes.END_HIGHLANDS), biomeHolderGetter.getOrThrow(Biomes.END_MIDLANDS), biomeHolderGetter.getOrThrow(Biomes.SMALL_END_ISLANDS), biomeHolderGetter.getOrThrow(Biomes.END_BARRENS));
     }
 
     private IpaBiomeSource(Holder<Biome> biomeHolder, Holder<Biome> biomeHolder1, Holder<Biome> biomeHolder2, Holder<Biome> biomeHolder3, Holder<Biome> biomeHolder4) {

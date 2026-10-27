@@ -6,10 +6,10 @@
     "type": "genesis:static",
     "x": -10000.0,
     "y": 0.0,
-    "z": 200000.0,
-    "xRot": 5,
-    "yRot": 10,
-    "zRot": -10
+    "z": 100000.0,
+    "xRot": 0,
+    "yRot": 0,
+    "zRot": 0
   },
   "properties": {
     "r0": 255, "g0": 0, "b0": 0,

@@ -10,6 +10,7 @@ import net.mreskimo.gam.GAM;
 import net.mreskimo.gam.worldgen.GAMBiomeModifiers;
 import net.mreskimo.gam.worldgen.GAMConfiguredFeatures;
 import net.mreskimo.gam.worldgen.GAMPlacedFeatures;
+import net.mreskimo.gam.worldgen.biome.GAMBiomes;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
@@ -18,8 +19,8 @@ public class GAMWorldgenProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.CONFIGURED_FEATURE, GAMConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, GAMPlacedFeatures::bootstrap)
-            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, GAMBiomeModifiers::bootstrap);
-            //.add(Registries.BIOME, ModBiomes::boostrap);
+            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, GAMBiomeModifiers::bootstrap)
+            .add(Registries.BIOME, GAMBiomes::boostrap);
 
     public GAMWorldgenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(GAM.MOD_ID));

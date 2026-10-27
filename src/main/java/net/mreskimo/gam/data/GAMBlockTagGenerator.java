@@ -3,6 +3,7 @@ package net.mreskimo.gam.data;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.mreskimo.gam.GAM;
@@ -43,6 +44,7 @@ public class GAMBlockTagGenerator extends BlockTagsProvider {
                         GAMBlocks.CERES_ROCKY_SAND.get(),
                         GAMBlocks.CERES_LIGHT_ROCKY_SAND.get(),
                         GAMBlocks.CERES_LIGHT_SAND.get(),
+                        Blocks.END_STONE,
                         GAMBlocks.CERES_SALT_DEPOSIT.get());
 
     }
