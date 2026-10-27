@@ -1,0 +1,4 @@
+// 1.20.1	2026-10-26T12:26:40.3203395	Registries
+da022cff98d0bf237ce27479332a19662e6fc986 data/gam/worldgen/biome/ipa_ocean_biome.json
+505383351d20aee4a05d45a0a0d85c0bc39b48e3 data/gam/worldgen/configured_feature/icy_dust_disk.json
+26aa74062fa6e3869da9fc41bf4e99d42493f4af data/gam/worldgen/placed_feature/icy_dust_disk_placed.json
