@@ -18,7 +18,7 @@
               "argument": {
                 "type": "minecraft:noise",
                 "noise": "minecraft:jagged",
-                "xz_scale": 1500,
+                "xz_scale": 750,
                 "y_scale": 0
               }
             }

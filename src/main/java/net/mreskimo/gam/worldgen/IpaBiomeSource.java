@@ -14,27 +14,27 @@ import net.mreskimo.gam.worldgen.biome.GAMBiomes;
 import java.util.stream.Stream;
 
 public class IpaBiomeSource extends BiomeSource {
-    public static final Codec<IpaBiomeSource> CODEC = RecordCodecBuilder.create((ipaBiomeSourceInstance) -> ipaBiomeSourceInstance.group(RegistryOps.retrieveElement(GAMBiomes.IPA_OCEAN_BIOME), RegistryOps.retrieveElement(Biomes.END_HIGHLANDS), RegistryOps.retrieveElement(Biomes.END_MIDLANDS), RegistryOps.retrieveElement(Biomes.SMALL_END_ISLANDS), RegistryOps.retrieveElement(Biomes.END_BARRENS)).apply(ipaBiomeSourceInstance, ipaBiomeSourceInstance.stable(IpaBiomeSource::new)));
+    public static final Codec<IpaBiomeSource> CODEC = RecordCodecBuilder.create((ipaBiomeSourceInstance) -> ipaBiomeSourceInstance.group(RegistryOps.retrieveElement(GAMBiomes.IPA_OCEAN_BIOME), RegistryOps.retrieveElement(GAMBiomes.IPA_ICE_OCEAN), RegistryOps.retrieveElement(Biomes.END_MIDLANDS), RegistryOps.retrieveElement(Biomes.SMALL_END_ISLANDS), RegistryOps.retrieveElement(Biomes.END_BARRENS)).apply(ipaBiomeSourceInstance, ipaBiomeSourceInstance.stable(IpaBiomeSource::new)));
     private final Holder<Biome> center;
-    private final Holder<Biome> highlands;
+    private final Holder<Biome> ice;
     private final Holder<Biome> midlands;
     private final Holder<Biome> islands;
     private final Holder<Biome> barrens;
 
     public static IpaBiomeSource create(HolderGetter<Biome> biomeHolderGetter) {
-        return new IpaBiomeSource(biomeHolderGetter.getOrThrow(GAMBiomes.IPA_OCEAN_BIOME), biomeHolderGetter.getOrThrow(Biomes.END_HIGHLANDS), biomeHolderGetter.getOrThrow(Biomes.END_MIDLANDS), biomeHolderGetter.getOrThrow(Biomes.SMALL_END_ISLANDS), biomeHolderGetter.getOrThrow(Biomes.END_BARRENS));
+        return new IpaBiomeSource(biomeHolderGetter.getOrThrow(GAMBiomes.IPA_OCEAN_BIOME), biomeHolderGetter.getOrThrow(GAMBiomes.IPA_ICE_OCEAN), biomeHolderGetter.getOrThrow(Biomes.END_MIDLANDS), biomeHolderGetter.getOrThrow(Biomes.SMALL_END_ISLANDS), biomeHolderGetter.getOrThrow(Biomes.END_BARRENS));
     }
 
     private IpaBiomeSource(Holder<Biome> biomeHolder, Holder<Biome> biomeHolder1, Holder<Biome> biomeHolder2, Holder<Biome> biomeHolder3, Holder<Biome> biomeHolder4) {
         this.center = biomeHolder;
-        this.highlands = biomeHolder1;
+        this.ice = biomeHolder1;
         this.midlands = biomeHolder2;
         this.islands = biomeHolder3;
         this.barrens = biomeHolder4;
     }
 
     protected Stream<Holder<Biome>> collectPossibleBiomes() {
-        return Stream.of(this.center, this.highlands, this.midlands, this.islands, this.barrens);
+        return Stream.of(this.center, this.ice, this.midlands, this.islands, this.barrens);
     }
 
     protected Codec<? extends BiomeSource> codec() {
@@ -54,7 +54,7 @@ public class IpaBiomeSource extends BiomeSource {
             int k1 = (SectionPos.blockToSectionCoord(k) * 2 + 1) * 8;
             double d0 = sampler.erosion().compute(new DensityFunction.SinglePointContext(j1, j, k1));
             if (d0 > (double)0.25F) {
-                return this.highlands;
+                return this.ice;
             } else if (d0 >= (double)-0.0625F) {
                 return this.midlands;
             } else {

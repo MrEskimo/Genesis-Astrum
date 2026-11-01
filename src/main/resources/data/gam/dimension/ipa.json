@@ -1,5 +1,5 @@
 {
-  "type": "gam:normal_planet_dimension_type",
+  "type": "gam:ipa_type",
   "generator": {
     "type": "minecraft:noise",
     "biome_source": {
