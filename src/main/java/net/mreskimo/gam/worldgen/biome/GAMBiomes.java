@@ -79,6 +79,7 @@ public class GAMBiomes {
         globalOverworldGeneration(biomeBuilder);
         BiomeDefaultFeatures.addIcebergs(biomeBuilder);
         BiomeDefaultFeatures.addBlueIce(biomeBuilder);
+        biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, GAMPlacedFeatures.ICE_DISK_PLACED);
 
 
         return new Biome.BiomeBuilder()

@@ -35,11 +35,13 @@ import java.util.List;
 public class GAMConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ICY_DUST_DISK = registerKey("icy_dust_disk");
     //public static final ResourceKey<ConfiguredFeature<?, ?>> ICY_DUST_PILLAR = registerKey("icy_dust_pillar");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ICE_DISK = registerKey("ice_disk");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest ceresReplaceable = new TagMatchTest(GAMTags.Blocks.CERES_REPLACEABLE);
 
         register(context, ICY_DUST_DISK, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(GAMBlocks.ICY_DUST.get()), BlockPredicate.matchesBlocks(List.of(GAMBlocks.CERES_SAND.get(), GAMBlocks.CERES_SALT_DEPOSIT.get())), UniformInt.of(2, 3), 1));
+        register(context, ICE_DISK, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(Blocks.ICE), BlockPredicate.matchesBlocks(List.of(Blocks.WATER, Blocks.ICE)), UniformInt.of(5, 7), 2));
 
     }
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
