@@ -76,7 +76,6 @@ public class GAMBiomes {
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
         //we need to follow the same order as vanilla biomes for the BiomeDefaultFeatures
 
-        globalOverworldGeneration(biomeBuilder);
         BiomeDefaultFeatures.addIcebergs(biomeBuilder);
         BiomeDefaultFeatures.addBlueIce(biomeBuilder);
         biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, GAMPlacedFeatures.ICE_DISK_PLACED);
